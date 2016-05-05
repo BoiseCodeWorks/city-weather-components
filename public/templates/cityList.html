@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<form class="form-inline">
+			<div class="form-group">
+				<input type="text" class="form-control" id="task" ng-model="$ctrl.newZip" placeholder="New Zip Code">
+			</div>
+			<button ng-click="$ctrl.addCity()" class="btn btn-primary">Add City</button>
+		</form>
+	</div>
+	<div class="panel-body">
+		<div class="text-center">
+			<city-weather ng-repeat="city in $ctrl.cities track by $index" city="city"></city-weather>
+		</div>
+	</div>
+</div>
